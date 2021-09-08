@@ -20,9 +20,28 @@
          <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
            <div class="p-4 flex flex-row items-center justify-between">
              <a href="#" class=" font-bold  text-white rounded-lg  focus:outline-none focus:shadow-outline text-2xl dark:text-black">Techyon</a>
-              <!-- toggler -->
-              <button id="toggle" onclick="myFunction()" class="  animate-pulse text-pink-500 px-4 py-2  mt-2 w-9 font-semibold  rounded-lg dark:text-pink-500 dark:hover:text-pink-600   dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900  hover:text-pink-200  focus:outline-none " href="#"><i class="fa fa-moon-o "></i></button>
-              <!-- toggler  END -->
+              <!-- toggler 
+              <button id="toggle" onclick="myFunction()" class="  text-pink-500 px-4 py-2  mt-2 w-9 font-semibold  rounded-lg dark:text-pink-500 dark:hover:text-pink-600   dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900  hover:text-pink-200  focus:outline-none " href="#">
+               <span> <i class=" fa-moon-o fa "></i> </span>   
+              </button>
+              <toggler  END -->
+               <!-- TOGGLE SWITCH -->
+          <div  class="flex justify-end items-center space-x-2 mx-6">
+  
+            <div>
+              <input  onclick="myFunction()" type="checkbox" name="" id="toggle" class="checkbox hidden  ">
+              <label for="toggle" class="w-11 h-5 bg-pink-200 relative flex items-center justify-between  rounded-full p-1   ">
+                <span class="text-black"> <i class=" fa-moon-o fa "></i></span>  
+                <div class=" absolute 
+                toggle-dot w-4 h-4  transition duration-300 items-center bg-gray-800 rounded-full transform shadow-md ">
+                  
+                </div>
+                <span class="" > <i class=" text-yellow-500 fa fa-sun-o"></i> </span>
+              </label>
+              </div>
+           
+            </div>
+            <!-- TOGGLE SWITCH ENDD -->
              <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-white dark:text-black">
                  <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -40,14 +59,7 @@
                  Register
                </button>
               
-             <!-- <div class="text-white px-4 py-2  mt-2 text-sm font-semibold bg-white rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-               <input type="checkbox" id="toggle" class="hidden">
-               <label for="toggle">
-              <div class="w-9 h-5 flex items-center bg-gray-300 rounded-full p-1">
-                <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform translate-x-3"></div>
-              </div>
-            </label>
-            </div> -->
+       
               </div>
              </div>
              <div class="  text-white  ">
@@ -449,11 +461,11 @@
               <!--footer-->
               <footer class="text-gray-600 bg-gray-900 body-font dark:bg-gray-200 dark:text-black">
                 <div class="container px-5 py-24 mx-auto flex   md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-                  <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left p-4">
+                  <div class="w-64 flex-shrink-0  md:mx-0 mx-auto text-center md:text-left p-4">
                     <h1 class="flex title-font font-bold items-center md:justify-start justify-center text-white text-2xl dark:text-black">
                      About Techyon
                     </h1>
-                    <p class="mt-2 text-sm text-white dark:text-black">Techyon is an inter college technical event held annually at PCCE. The word Techyon was derived from Tachyon which is a hypothetical particle with speed more than the speed of the light. It hosts various technical events across all the departments. </p>
+                    <p class="mt-2  text-sm  text-white dark:text-black">Techyon is an inter college technical event held annually at PCCE. The word Techyon was derived from Tachyon which is a hypothetical particle with speed more than the speed of the light. It hosts various technical events across all the departments. </p>
                   </div>
 
                     <div class="lg:w-1/4 md:w-1/2 w-full px-4 mx-auto  ">
