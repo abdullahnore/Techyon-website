@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "build" : "tailwindcss build ./src/style.css -o ./public/style.css"
+    "build": "tailwindcss build ./src/style.css -o ./public/style.css"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,6 @@
   "dependencies": {
     "autoprefixer": "^10.3.4",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.2.9"
+    "tailwindcss": "^2.2.12"
   }
 }

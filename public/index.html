@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="dark">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +11,14 @@
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body class="bg-black">
+    <body class="bg-black dark:bg-white dark:text-black" >
        <!--Navbar below-->
        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-       <div style="font-family: 'Poppins'; height:700px;" class="bg-black" >
+       <div style="font-family: 'Poppins'; height:700px;" class="bg-black dark:bg-white dark:text-black" >
        <div class="w-full bg-no-repeat bg-cover image sm:w-full lg:w-full"  >
          <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
            <div class="p-4 flex flex-row items-center justify-between">
-             <a href="#" class=" font-bold  text-white rounded-lg  focus:outline-none focus:shadow-outline text-2xl">Techyon</a>
+             <a href="#" class=" font-bold  text-white rounded-lg  focus:outline-none focus:shadow-outline text-2xl dark:text-black">Techyon</a>
              <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-white">
                  <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -26,16 +26,25 @@
                </svg>
              </button>
            </div>
-           <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold text-white  rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
-             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Events</a>
-             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Team</a>
-             <a class="text-white px-4 py-2  mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+           <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row dark:bg-white dark:text-black">
+             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold text-white  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-black dark:hover:text-white dark:text-black md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
+             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Events</a>
+             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Team</a>
+             <a class="text-white px-4 py-2  mt-2 text-sm font-semibold  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
              <div @click.away="open = false" class="relative" x-data="{ open: false }">
-               <button @click="open = !open" class="flex flex-row bg-pink-600 text-white items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-pink-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+               <button @click="open = !open" class="flex flex-row bg-pink-600 text-white items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-white rounded-lg dark:bg-pink-500 dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-pink-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-pink-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                  Register
                </button>
-               </div>
+               <button id="toggle" onclick="myFunction()" class="animate-pulse text-pink-500 px-4 py-2  mt-2 w-9 font-semibold  rounded-lg dark:text-pink-500 dark:hover:text-pink-600   dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900  hover:text-pink-200  focus:outline-none " href="#"><i class="fa fa-moon-o "></i></button>
+             <!-- <div class="text-white px-4 py-2  mt-2 text-sm font-semibold bg-white rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+               <input type="checkbox" id="toggle" class="hidden">
+               <label for="toggle">
+              <div class="w-9 h-5 flex items-center bg-gray-300 rounded-full p-1">
+                <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform translate-x-3"></div>
+              </div>
+            </label>
+            </div> -->
+              </div>
              </div>
              <div class="  text-white  ">
               <div class="   flex flex-row-reverse   md:mx-16 lg:justify-between flex-wrap justify-start ">
@@ -43,10 +52,10 @@
                   <img src="../images/Hero__image.png" alt="" class="  ">
                 </div>
                 
-                <div class="  mx-4 w-screen self-end  ">
+                <div class="  mx-4 w-screen self-end dark:text-black ">
                   <h1 class="text-3xl  font-bold mb-4">Our very own tech <br/>event is here !!!</h1>
                   <span class="">Make sure to clear your calender</span><br >
-                  <button class="bg-pink-600  px-4 py-2 m-2 rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white">Schedule</button>
+                  <button class="bg-pink-600  px-4 py-2 m-2 rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white dark:text-white">Schedule</button>
                  </div>
                </div>
           
@@ -61,49 +70,49 @@
 
 <!--  OUR EVENTS CARDS -->
 
-<section class=" flex items-center text-gray-600  mt-3 bg-black ">
+<section class=" flex items-center text-gray-600  mt-3 bg-black dark:bg-white">
   <div class="container px-5 py-5 mx-auto">
       <div class="text-center mb-12 pt-24">
-          <h1 class="text-4xl md:text-6xl text-white font-semibold faq">Our Events</h1>
+          <h1 class="text-4xl md:text-6xl text-white font-semibold faq dark:text-black">Our Events</h1>
       </div>
       <div class="flex flex-wrap -m-4">
           <!--first card-->
-          <div class="p-4 sm:w-1/2 lg:w-1/3">
+          <div class="p-4 sm:w-1/2 lg:w-1/3 dark:text-black">
               <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                   <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
                       src="../images/mocktest.jpg" alt="image">
-                  <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900">
+                  <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200">
                       
-                      <h1 class="text-2xl font-semibold mb-3">Code Crunch</h1>
-                      <p class="leading-relaxed mb-4">OCT 10 and 11</p>
+                      <h1 class="text-2xl font-semibold mb-3 dark:text-black">Code Crunch</h1>
+                      <p class="leading-relaxed mb-4 dark:text-black">OCT 10 and 11</p>
                         <button class="bg-pink-600 px-4 py-2  rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white">Register</button>
                   </div>
               </div>
           </div>
           <!--1 ENDD-->
            <!--2 card-->
-           <div class="p-4 sm:w-1/2 lg:w-1/3">
+           <div class="p-4 sm:w-1/2 lg:w-1/3 dark:text-black">
             <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
                     src="../images/mocktest.jpg" alt="image">
-                <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900">
+                <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200">
                     
-                    <h1 class="text-2xl font-semibold mb-3">Code Crunch</h1>
-                    <p class="leading-relaxed mb-4">OCT 10 and 11</p>
+                    <h1 class="text-2xl font-semibold mb-3 dark:text-black">Code Crunch</h1>
+                    <p class="leading-relaxed mb-4 dark:text-black">OCT 10 and 11</p>
                       <button class="bg-pink-600 px-4 py-2  rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white">Register</button>
                 </div>
             </div>
         </div>
         <!--2 ENDD-->
           <!--3 card-->
-          <div class="p-4 sm:w-1/2 lg:w-1/3">
+          <div class="p-4 sm:w-1/2 lg:w-1/3 dark:text-black">
             <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
-                    src="../images/mockimage.png" alt="image">
-                <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900">
+                    src="../images/mocktest.jpg" alt="image">
+                <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200">
                     
-                    <h1 class="text-2xl font-semibold mb-3">Code Crunch</h1>
-                    <p class="leading-relaxed mb-4">OCT 10 and 11</p>
+                    <h1 class="text-2xl font-semibold mb-3 dark:text-black">Code Crunch</h1>
+                    <p class="leading-relaxed mb-4 dark:text-black">OCT 10 and 11</p>
                       <button class="bg-pink-600 px-4 py-2  rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white">Register</button>
                 </div>
             </div>
@@ -121,15 +130,15 @@
   
   <!-- SPONSORS SECTION  -->
  
-  <section class=" flex items-center text-gray-600  mt-3 bg-black  ">
+  <section class=" flex items-center text-gray-600  mt-3 bg-black dark:bg-white dark:shadow-none">
     <div class="container px-5 py-5 mx-auto">
         <div class="text-center mb-12 pt-24">
-            <h1 class="text-4xl md:text-6xl text-white font-semibold faq">Our Sponsors</h1>
+            <h1 class="text-4xl md:text-6xl text-white font-semibold faq  dark:text-black ">Our Sponsors</h1>
         </div>
-        <div class="flex flex-wrap -m-4">
+        <div class="flex flex-wrap -m-4 dark:shadow-none">
             <!--first card-->
-            <div class="p-4">
-                <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <div class="p-4 dark:shadow-none">
+                <div class=" h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl dark:shadow-none transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                     <img class="   w-screen object-contain p-14  object-center"
                         src="../images/spon1dark.png" alt="image">
                   
@@ -139,8 +148,8 @@
             <!--1 ENDD-->
             <!--2 card-->
             <div class="p-4">
-              <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                  <img class="   w-screen object-contain p-14  object-center"
+              <div class=" h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 dark:shadow-none">
+                  <img class="dark:shadow-none w-screen object-contain p-14  object-center"
                       src="../images/spon2.png" alt="image">
                 
               </div>
@@ -157,10 +166,10 @@
 
            <!--our team-->
 
-          <section class=" flex items-center text-gray-600 mt-3 bg-black  ">
+          <section class=" flex items-center text-gray-600 mt-3 bg-black dark:bg-white">
             <div class="container px-5 py-5 mx-auto">
                 <div class="text-center mb-12 pt-24">
-                    <h1 class="text-4xl md:text-6xl text-white font-semibold faq">Our Team</h1>
+                    <h1 class="text-4xl md:text-6xl text-white font-semibold faq dark:text-black">Our Team</h1>
                 </div>
                 <div class="flex flex-wrap -m-4">
                     <!--first card-->
@@ -168,7 +177,7 @@
                         <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                             <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
                                 src="../images/mockimage.png" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900">
+                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
                                 
                                 <h1 class="text-2xl font-semibold mb-3">Random name</h1>
                                 <p class="leading-relaxed mb-6">Graphics and UI Lead
@@ -194,7 +203,7 @@
                         <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                             <img class="lg:h-72 md:h-48 sm:h-48 w-screen object-cover p-.5  object-center "
                                 src="../images/abdullah.jpg" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900">
+                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600">
                                 
                                 <h1 class="text-2xl font-semibold mb-3">Random name</h1>
                                 <p class="leading-relaxed mb-6">Graphics and UI Lead
@@ -219,8 +228,8 @@
                     <div class="p-4 sm:w-1/2 lg:w-1/3">
                         <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                             <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5 object-center"
-                                src="../images/mockimage.png" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900">
+                                src="../images/mockimage.png" alt="image"> 
+                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
                                 
                                 <h1 class="text-2xl font-semibold mb-3">Random name</h1>
                                 <p class="leading-relaxed mb-6">Graphics and UI Lead
@@ -246,7 +255,7 @@
                         <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                             <img class="lg:h-72 md:h-48  sm:h-48 w-screen object-cover p-.5  object-center"
                                 src="../images/roshan.jpg" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900">
+                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
                                 
                                 <h1 class="text-2xl font-semibold mb-3">Random name</h1>
                                 <p class="leading-relaxed mb-6">Graphics and UI Lead
@@ -272,7 +281,7 @@
                         <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                             <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
                                 src="../images/mockimage.png" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900">
+                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
                                 
                                 <h1 class="text-2xl font-semibold mb-3">Random name</h1>
                                 <p class="leading-relaxed mb-6">Graphics and UI Lead
@@ -298,7 +307,7 @@
                         <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                             <img class="lg:h-72 md:h-48  sm:h-48  w-screen object-cover p-.5  object-center"
                                 src="../images/mockimage.png" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900">
+                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
                                 
                                 <h1 class="text-2xl font-semibold mb-3">Random name</h1>
                                 <p class="leading-relaxed mb-6">Graphics and UI Lead
@@ -324,10 +333,10 @@
         </section>
 
             <!--Faq -->
-            <section class="text-gray-100 body-font bg-black  sm:pt-12">
+            <section class="text-gray-100 body-font bg-black  sm:pt-12 dark:bg-white dark:text-black">
                 <div class="container px-5 py-24 mx-auto">
                   <div class="text-center mb-20">
-                    <h1 class="sm:text-3xl text-5xl font-semibold text-center title-font text-gray-100 mb-4 faq ml-4 mr-4"> FAQs  </h1>
+                    <h1 class="sm:text-3xl text-5xl font-semibold text-center title-font text-gray-100 mb-4 faq ml-4 mr-4 dark:text-black"> FAQs  </h1>
                   </div>
                   <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
                     <div class="p-2 sm:w-1/2 w-full">
@@ -391,15 +400,15 @@
               </section>
 
               <!--contact us-->
-              <section class="text-gray-100 body-font bg-black" id="contactus">
+              <section class="text-gray-100 body-font bg-black dark:bg-white dark:text-black" id="contactus">
                 <div class="container px-5 py-24 mx-auto">
                   <div class="text-center mb-20">
-                    <h1 class="sm:text-3xl text-2xl font-black text-center title-font text-white mb-4 faq">  Contact us  </h1>
+                    <h1 class="sm:text-3xl text-2xl font-black text-center title-font text-white mb-4 faq dark:text-black">  Contact us  </h1>
                   </div>
                   <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
                     <div class="p-2 sm:w-1/2 w-full">
                       <div class="  flex p-4 h-full items-center">
-                        <span class="title-font font-semibold text-2xl text-white">TECHYON</span>
+                        <span class="title-font font-semibold text-2xl text-white dark:text-black">TECHYON</span>
                       </div>
                     </div>
                     <div class="p-2 sm:w-1/2 w-full">
@@ -434,17 +443,17 @@
               </section>
 
               <!--footer-->
-              <footer class="text-gray-600 bg-gray-900 body-font">
+              <footer class="text-gray-600 bg-gray-900 body-font dark:bg-gray-200 dark:text-black">
                 <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                   <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left p-4">
-                    <h1 class="flex title-font font-bold items-center md:justify-start justify-center text-white text-2xl">
+                    <h1 class="flex title-font font-bold items-center md:justify-start justify-center text-white text-2xl dark:text-black">
                      About Techyon
                     </h1>
-                    <p class="mt-2 text-sm text-white">Techyon is an inter college technical event held annually at PCCE. The word Techyon was derived from Tachyon which is a hypothetical particle with speed more than the speed of the light. It hosts various technical events across all the departments. </p>
+                    <p class="mt-2 text-sm text-white dark:text-black">Techyon is an inter college technical event held annually at PCCE. The word Techyon was derived from Tachyon which is a hypothetical particle with speed more than the speed of the light. It hosts various technical events across all the departments. </p>
                   </div>
 
                     <div class="lg:w-1/4 md:w-1/2 w-full px-4 mx-auto ">
-                      <h2 class=" font-bold text-white text-xl mb-3">Quick Links</h2><br>
+                      <h2 class=" font-bold text-white text-xl mb-3 dark:text-black">Quick Links</h2><br>
                       <nav class="list-none mb-10  leading-loose  ">
                         <li>
                           <a class="text-gray-600 hover:text-white">Home</a>
@@ -471,7 +480,14 @@
          </div>
        </div>
        <script>
-         console.log("Made with love by Computer Department :)")
+         console.log("Made with love by Computer Department :)");
+
+         function myFunction() {
+   const html =  document.querySelector("html");
+   html.classList.toggle("dark");
+}
+
+myFunction();
        </script>
     </body>
 </html>
