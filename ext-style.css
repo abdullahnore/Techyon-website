@@ -20,6 +20,6 @@
   left: 0.5em;
   margin-right: -50%;
 }
-#toggle:checked ~ label div.toggle-dot {
-  transform: translateX(20px);
+.checkbox:checked + .label .toggle-dot {
+  transform: translateX(24px);
 }
