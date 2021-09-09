@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html class="dark">
     <head>
+      <style>
+        html {
+  scroll-behavior: smooth;
+}
+      </style>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
@@ -26,7 +31,7 @@
               </button>
               <toggler  END -->
                <!-- TOGGLE SWITCH -->
-          <div  class="flex justify-end items-center space-x-2 mx-6">
+          <div id="Home" class="flex justify-end items-center space-x-2 mx-6">
   
             <div>
               <input  onclick="myFunction()" type="checkbox" name="" id="toggle" class="checkbox hidden  ">
@@ -50,12 +55,13 @@
              </button>
            </div>
            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row dark:bg-white dark:text-black">
-             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold text-white  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-black dark:hover:text-white dark:text-black md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
-             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Events</a>
-             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Team</a>
-             <a class="text-white px-4 py-2  mt-2 text-sm font-semibold  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold text-white  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-black dark:hover:text-white dark:text-black md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Home">Home</a>
+             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Events">Events</a>
+             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Sponsors">Sponsors</a>
+             <a class="text-white px-4 py-2 mt-2 text-sm font-semibold text-white  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-black dark:hover:text-white dark:text-black md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Results</a>
+             <a class="text-white px-4 py-2  mt-2 text-sm font-semibold  rounded-lg dark:bg-white dark:hover:bg-pink-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#Contactus">Contact</a>
              <div @click.away="open = false" class="relative" x-data="{ open: false }">
-               <button @click="open = !open" class="flex flex-row bg-pink-600 text-white items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-white rounded-lg dark:bg-pink-500 dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-pink-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-pink-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+               <button @click="open = !open" class="flex flex-row bg-pink-600 text-white items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-white rounded-lg dark:bg-pink-500 dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-black md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                  Register
                </button>
               
@@ -69,7 +75,7 @@
                 </div>
                 
                 <div class="  mx-4 w-screen self-end dark:text-black md:mt-6 ">
-                  <h1 class="text-3xl  font-bold mb-4">Our very own tech <br/>event is here !!!</h1>
+                  <h1 class="text-3xl  font-bold mb-2">Our very own tech <br/>event is here !!!</h1>
                   <span class="">Make sure to clear your calender</span><br >
                   <button class="bg-pink-600  px-4 py-2 m-2 rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white dark:text-white">Schedule</button>
                  </div>
@@ -86,7 +92,7 @@
 
 <!--  OUR EVENTS CARDS -->
 
-<section class=" flex items-center text-gray-600  mt-3 bg-black dark:bg-white px-6 md:px-12 lg:px-12 ">
+<section id="Events" class=" flex items-center text-gray-600  mt-3 bg-black dark:bg-white px-6 md:px-12 lg:px-12 ">
   <div class="container px-5 py-5 mx-auto">
       <div class="text-center mb-12 pt-24">
           <h1 class="text-4xl md:text-6xl text-white font-semibold faq dark:text-black">Our Events</h1>
@@ -99,41 +105,14 @@
                       src="images/mocktest.jpg" alt="image">
                   <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200">
                       
-                      <h1 class="text-2xl font-semibold mb-3 dark:text-black">Code Crunch</h1>
+                      <h1 class="text-2xl font-semibold  dark:text-black">Code Crunch</h1>
                       <p class="leading-relaxed mb-4 dark:text-black">OCT 10 and 11</p>
-                        <button class="bg-pink-600 px-4 py-2  rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white">Register</button>
+                        <button class="bg-pink-600 px-4 py-2  rounded-lg  transition duration-500 ease-in-out  hover:bg-black hover:text-white">Register</button>
                   </div>
               </div>
           </div>
           <!--1 ENDD-->
-           <!--2 card-->
-           <div class="p-4 sm:w-1/2 lg:w-1/3 dark:text-black">
-            <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
-                    src="images/mocktest.jpg" alt="image">
-                <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200">
-                    
-                    <h1 class="text-2xl font-semibold mb-3 dark:text-black">Code Crunch</h1>
-                    <p class="leading-relaxed mb-4 dark:text-black">OCT 10 and 11</p>
-                      <button class="bg-pink-600 px-4 py-2  rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white">Register</button>
-                </div>
-            </div>
-        </div>
-        <!--2 ENDD-->
-          <!--3 card-->
-          <div class="p-4 sm:w-1/2 lg:w-1/3 dark:text-black">
-            <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
-                    src="images/mocktest.jpg" alt="image">
-                <div class="p-6 hover:bg-gray-700 text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200">
-                    
-                    <h1 class="text-2xl font-semibold mb-3 dark:text-black">Code Crunch</h1>
-                    <p class="leading-relaxed mb-4 dark:text-black">OCT 10 and 11</p>
-                      <button class="bg-pink-600 px-4 py-2  rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white">Register</button>
-                </div>
-            </div>
-        </div>
-        <!--3 ENDD-->
+        
           
           
       
@@ -146,7 +125,7 @@
   
   <!-- SPONSORS SECTION  -->
  
-  <section class=" flex items-center text-gray-600  mt-3 bg-black dark:bg-white dark:shadow-none">
+  <section id= "Sponsors" class=" flex items-center text-gray-600  mt-3 bg-black dark:bg-white dark:shadow-none">
     <div class="container px-5 py-5 mx-auto">
         <div class="text-center mb-12 pt-24">
             <h1 class="text-4xl md:text-6xl text-white font-semibold faq  dark:text-black ">Our Sponsors</h1>
@@ -154,7 +133,7 @@
         <div class="flex flex-wrap -m-4 dark:shadow-none">
             <!--first card-->
             <div class="p-4 dark:shadow-none">
-                <div class=" h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl dark:shadow-none transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                <div class=" h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden  dark:shadow-none ">
                     <img class="   w-screen object-contain p-14  object-center"
                         src="images/spon1dark.png" alt="image">
                   
@@ -164,7 +143,7 @@
             <!--1 ENDD-->
             <!--2 card-->
             <div class="p-4">
-              <div class=" h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 dark:shadow-none">
+              <div class=" h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden  ">
                   <img class="dark:shadow-none w-screen object-contain p-14  object-center"
                       src="images/spon2.png" alt="image">
                 
@@ -188,165 +167,104 @@
                     <h1 class="text-4xl md:text-6xl text-white font-semibold faq dark:text-black">Our Team</h1>
                 </div>
                 <div class="flex flex-wrap -m-4">
-                    <!--first card-->
-                    <div class="p-4 sm:w-1/2 lg:w-1/3">
-                        <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                            <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
-                                src="images/mockimage.png" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
-                                
-                                <h1 class="text-2xl font-semibold mb-3">Random name</h1>
-                                <p class="leading-relaxed mb-6">Graphics and UI Lead
-                                <div class="flex items-center flex-wrap ">
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-linkedin  mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-instagram mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-github mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--2nd card-->
-                    <div class="p-4 sm:w-1/2 lg:w-1/3">
-                        <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                            <img class="lg:h-72 md:h-48 sm:h-48 w-screen object-cover p-.5  object-center "
-                                src="images/abdullah.jpg" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600">
-                                
-                                <h1 class="text-2xl font-semibold mb-3">Abdullah Nore</h1>
-                                <p class="leading-relaxed mb-6">Front End
-                                <div class="flex items-center flex-wrap ">
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-linkedin  mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-instagram mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-github mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--3rd card-->
-                    <div class="p-4 sm:w-1/2 lg:w-1/3">
-                        <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                            <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5 object-center"
-                                src="images/devraj.jpg" alt="image"> 
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
-                                
-                                <h1 class="text-2xl font-semibold mb-3">Devraj</h1>
-                                <p class="leading-relaxed mb-6">Graphics and UI Lead
-                                <div class="flex items-center flex-wrap ">
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-linkedin  mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-instagram mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-github mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--4th card-->
-                    <div class="p-4 sm:w-1/2 lg:w-1/3">
-                        <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                            <img class="lg:h-72 md:h-48  sm:h-48 w-screen object-cover p-.5  object-center"
-                                src="images/roshan.jpg" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
-                                
-                                <h1 class="text-2xl font-semibold mb-3">Roshan</h1>
-                                <p class="leading-relaxed mb-6">Front Lead
-                                <div class="flex items-center flex-wrap ">
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-linkedin  mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-instagram mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-github mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--5th card-->
-                    <div class="p-4 sm:w-1/2 lg:w-1/3">
-                        <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                            <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
-                                src="images/anmol.jpg" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
-                                
-                                <h1 class="text-2xl font-semibold mb-3">Anmol</h1>
-                                <p class="leading-relaxed mb-6">Graphics and UI Lead
-                                <div class="flex items-center flex-wrap ">
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-linkedin  mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-instagram mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-github mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--6th card-->
-                    <div class="p-4 sm:w-1/2 lg:w-1/3">
-                        <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                            <img class="lg:h-72 md:h-48  sm:h-48  w-screen object-cover p-.5  object-center"
-                                src="images/mockimage.png" alt="image">
-                            <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl">
-                                
-                                <h1 class="text-2xl font-semibold mb-3">Random name</h1>
-                                <p class="leading-relaxed mb-6">Graphics and UI Lead
-                                <div class="flex items-center flex-wrap ">
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-linkedin  mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-instagram mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-github mr-12"></i>
-                                    </a>
-                                    <a class="text-pink-600 inline-flex items-center md:mb-2 lg:mb-0 text-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-white">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+             
+    <!--1 card-->
+    <div class="p-4 sm:w-1/2 lg:w-1/4">
+      <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+          <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
+              src="images/mockimage.png" alt="image">
+          <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl ">
+              
+              <h1 class="text-2xl font-semibold mb-3">Vishrut Mangoli</h1>
+              <p class="leading-relaxed mb-6">Chief Coordinator <br>Computer Department</p>
+              
+                
+              <div class="flex flex-wrap ">
+      
+                    <button class="bg-pink-600 px-4 py-2 flex-1  rounded-lg  transition duration-500 ease-in-out  hover:bg-black hover:text-white">
+                      <a href='https://wa.me/919766055610' class=" items-center  text-2xl  text-white"  target='_blank'>
+                      <i class= "fa fa-whatsapp  "></i></a></button>
+
+              </div>
+          </div>
+      </div>
+  </div>
+  
+<!-- 1E -->                                
+            <!--2 card-->
+          <div class="p-4 sm:w-1/2 lg:w-1/4">
+            <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
+                    src="images/mockimage.png" alt="image">
+                <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl ">
+                    
+                    <h1 class="text-2xl font-semibold mb-3">Vishrut Mangoli</h1>
+                    <p class="leading-relaxed mb-6">Chief Coordinator <br>Computer Department</p>
+                    
+                      
+                    <div class="flex flex-wrap ">
+            
+                          <button class="bg-pink-600 px-4 py-2 flex-1  rounded-lg  transition duration-500 ease-in-out  hover:bg-black hover:text-white">
+                            <a href='https://wa.me/919766055610' class=" items-center  text-2xl  text-white"  target='_blank'>
+                            <i class= "fa fa-whatsapp  "></i></a></button>
+
                     </div>
                 </div>
             </div>
+        </div>
+        
+    <!-- 2E -->      
+                  <!--3 card-->
+          <div class="p-4 sm:w-1/2 lg:w-1/4">
+            <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
+                    src="images/mockimage.png" alt="image">
+                <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl ">
+                    
+                    <h1 class="text-2xl font-semibold mb-3">Vishrut Mangoli</h1>
+                    <p class="leading-relaxed mb-6">Chief Coordinator <br>Computer Department</p>
+                    
+                      
+                    <div class="flex flex-wrap ">
+            
+                          <button class="bg-pink-600 px-4 py-2 flex-1  rounded-lg  transition duration-500 ease-in-out  hover:bg-black hover:text-white">
+                            <a href='https://wa.me/919766055610' class=" items-center  text-2xl  text-white"  target='_blank'>
+                            <i class= "fa fa-whatsapp  "></i></a></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <!-- 3E -->     
+     <!--4 card-->
+     <div class="p-4 sm:w-1/2 lg:w-1/4">
+      <div class="h-full border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+          <img class="lg:h-72 md:h-48 sm:h-48  w-screen object-cover p-.5  object-center"
+              src="images/mockimage.png" alt="image">
+          <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in bg-gray-900 dark:bg-gray-200 dark:hover:text-white dark:hover:bg-gray-600 dark:shadow-2xl ">
+              
+              <h1 class="text-2xl font-semibold mb-3">Vishrut Mangoli</h1>
+              <p class="leading-relaxed mb-6">Chief Coordinator <br>Computer Department</p>
+              
+                
+              <div class="flex flex-wrap ">
+      
+                    <button class="bg-pink-600 px-4 py-2 flex-1  rounded-lg  transition duration-500 ease-in-out  hover:bg-black hover:text-white">
+                      <a href='https://wa.me/919766055610' class=" items-center  text-2xl  text-white"  target='_blank'>
+                      <i class= "fa fa-whatsapp  "></i></a></button>
+
+              </div>
+          </div>
+      </div>
+  </div>
+  
+<!-- 4E -->
+                </div>
+            </div>
         </section>
+        
+           <!--our team ENDDD-->
 
             <!--Faq -->
             <section class="text-gray-100 body-font bg-black  sm:pt-12 dark:bg-white dark:text-black">
@@ -416,7 +334,7 @@
               </section>
 
               <!--contact us-->
-              <section class="text-gray-100 body-font bg-black dark:bg-white dark:text-black" id="contactus">
+              <section  id="Contactus" class="text-gray-100 body-font bg-black dark:bg-white dark:text-black" id="contactus">
                 <div class="container px-5  mx-auto">
                   <div class="text-center mb-20">
                     <h1 class="sm:text-3xl text-2xl font-black text-center title-font text-white mb-4 faq dark:text-black">  Contact us  </h1>
@@ -442,9 +360,9 @@
                     </div>
                     <div class="p-2 sm:w-1/2 w-full">
                       <div class="  flex p-4 h-full items-center">
-                        <a href="mailto:techyon2020@gmail.com">
+                        <a href="mailto:pccetechyon2k21@gmail.com">
                           <span class="text-4xl text-pink-600 font-bold mr-6">@</span>
-                        <span class="title-font font-medium">techyon2020@gmail.com
+                        <span class="title-font font-medium">techyon2021@gmail.com
                         </span>
                       </a>
                       </div>
@@ -459,32 +377,33 @@
               </section>
 
               <!--footer-->
-              <footer class="text-gray-600 bg-gray-900 body-font dark:bg-gray-200 dark:text-black">
-                <div class="container px-5 py-24 mx-auto flex   md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-                  <div class="w-64 flex-shrink-0  md:mx-0 mx-auto text-center md:text-left p-4">
-                    <h1 class="flex title-font font-bold items-center md:justify-start justify-center text-white text-2xl dark:text-black">
+              <footer class="  text-gray-600 bg-gray-900 body-font dark:bg-gray-200 dark:text-black">
+                <div class=" flex flex-row flex-wrap justify-evenly py-12 ">
+                  <div class="  my-2 p-6 lg:w-1/2 ">
+                    <h1 class=" title-font font-bold text-white text-2xl dark:text-black text-center">
                      About Techyon
                     </h1>
-                    <p class="mt-2  text-sm  text-white dark:text-black">Techyon is an inter college technical event held annually at PCCE. The word Techyon was derived from Tachyon which is a hypothetical particle with speed more than the speed of the light. It hosts various technical events across all the departments. </p>
+                    <p class="mt-2  text-sm  text-white dark:text-black ">Techyon is an inter college technical event held annually at PCCE. The word Techyon was derived from Tachyon which is a hypothetical particle with speed more than the speed of the light. It hosts various technical events across all the departments. </p>
                   </div>
 
-                    <div class="lg:w-1/4 md:w-1/2 w-full px-4 mx-auto  ">
-                      <h2 class=" font-bold text-white text-xl mb-3 dark:text-black">Quick Links</h2><br>
-                      <nav class="list-none mb-10  leading-loose  ">
+                    <div class="  p-8 m-2">
+                      <h2 class=" font-bold text-white text-xl  dark:text-black text-center">Quick Links</h2><br>
+                      <nav class="list-none  leading-loose  flex flex-row space-x-8 flex-wrap justify-center ">
                         <li>
-                          <a class="text-gray-600 hover:text-white">Home</a>
+                          <a href="#Home" class="text-gray-600 hover:text-white">Home</a>
                         </li>
                         <li>
-                          <a class="text-gray-600 hover:text-white">Events</a>
+                          <a href="#Events" class="text-gray-600 hover:text-white">Events</a>
+                        </li>
+                       
+                        <li>
+                          <a  href="#" class="text-gray-600 hover:text-white">Team</a>
                         </li>
                         <li>
-                          <a class="text-gray-600 hover:text-white">Sponsors</a>
-                        </li>
-                        <li>
-                          <a class="text-gray-600 hover:text-white">Team</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-white" href="#contactus">Contact</a>
+                            <a class="text-gray-600 hover:text-white " href="#contactus">Contact</a>
+                          </li>
+                          <li>
+                            <a href="#Sponsors"class="text-gray-600 hover:text-white">Sponsors</a>
                           </li>
                       </nav>
                     </div>
